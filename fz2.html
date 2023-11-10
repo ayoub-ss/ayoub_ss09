@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            position: relative;
+        }
+        #question {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        #buttons {
+            display: flex;
+            justify-content: center;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #message {
+            display: none;
+            font-size: 24px;
+            margin-top: 20px;
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="question">bari tvalider 3nd mahboub?</div>
+    <div id="buttons">
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+    </div>
+    <div id="message">hhhh wlh la tfrtih</div>
+    <script>
+        const yesButton = document.getElementById("yesButton");
+        const noButton = document.getElementById("noButton");
+        const message = document.getElementById("message");
+
+        // Store the initial position of the Yes button
+        const initialPosition = {
+            left: yesButton.style.left,
+            top: yesButton.style.top
+        };
+
+        yesButton.addEventListener("click", () => {
+            const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - 100));
+            yesButton.style.position = "absolute";
+            yesButton.style.left = randomX + "px";
+            yesButton.style.top = randomY + "px";
+
+            // Hide the message if it was visible
+            message.style.display = "none";
+        });
+
+        noButton.addEventListener("click", () => {
+            message.style.display = "block";
+
+            // Reset the position of the Yes button
+            yesButton.style.position = "static";
+            yesButton.style.left = initialPosition.left;
+            yesButton.style.top = initialPosition.top;
+        });
+    </script>
+</body>
+</html>
