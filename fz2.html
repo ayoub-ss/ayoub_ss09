@@ -8,6 +8,8 @@
             font-family: Arial, sans-serif;
             text-align: center;
             position: relative;
+            background-image: url(https://ensa-tetouan.ac.ma/wp-content/uploads/2019/10/IMG_5134g.jpg);
+            background-position: center center;
         }
         #question {
             font-size: 20px;
@@ -27,18 +29,22 @@
             display: none;
             font-size: 24px;
             margin-top: 20px;
-            color: red;
+            color:rgb(243, 243, 243) ;
             text-align: center;
         }
+        .ab{color: white;
+        text-shadow:  1px 1px 2px rgb(249, 4, 4), 0 0 25px blue, 0 0 5px darkblue;
+}
     </style>
 </head>
 <body>
-    <div id="question">bari tvalider 3nd mahboub?</div>
+
+    <div id="question" class="ab"><h1>bari tvalider 3nd mahboub?</h1> </div>
     <div id="buttons">
         <button id="yesButton">Yes</button>
         <button id="noButton">No</button>
     </div>
-    <div id="message">hhhh wlh la tfrtih</div>
+    <div id="message" class="ab">hhhh wlh la tfrtih</div>
     <script>
         const yesButton = document.getElementById("yesButton");
         const noButton = document.getElementById("noButton");
@@ -49,6 +55,7 @@
             left: yesButton.style.left,
             top: yesButton.style.top
         };
+        
 
         yesButton.addEventListener("click", () => {
             const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
@@ -72,3 +79,4 @@
     </script>
 </body>
 </html>
+
