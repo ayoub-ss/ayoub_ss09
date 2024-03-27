@@ -1,82 +1,16 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            position: relative;
-            background-image: url(https://ensa-tetouan.ac.ma/wp-content/uploads/2019/10/IMG_5134g.jpg);
-            background-position: center center;
-        }
-        #question {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-        #buttons {
-            display: flex;
-            justify-content: center;
-        }
-        button {
-            font-size: 16px;
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-        }
-        #message {
-            display: none;
-            font-size: 24px;
-            margin-top: 20px;
-            color:rgb(243, 243, 243) ;
-            text-align: center;
-        }
-        .ab{color: white;
-        text-shadow:  1px 1px 2px rgb(249, 4, 4), 0 0 25px blue, 0 0 5px darkblue;
-}
-    </style>
+  <meta charset="UTF-8">
+  <title>CodePen - YouTube New to you Button</title>
+  <link rel="stylesheet" href="./chadda.css">
+
 </head>
 <body>
-
-    <div id="question" class="ab"><h1>bari tvalider 3nd mahboub?</h1> </div>
-    <div id="buttons">
-        <button id="yesButton">Yes</button>
-        <button id="noButton">No</button>
-    </div>
-    <div id="message" class="ab">hhhh wlh la tfrtih</div>
-    <script>
-        const yesButton = document.getElementById("yesButton");
-        const noButton = document.getElementById("noButton");
-        const message = document.getElementById("message");
-
-        // Store the initial position of the Yes button
-        const initialPosition = {
-            left: yesButton.style.left,
-            top: yesButton.style.top
-        };
-        
-
-        yesButton.addEventListener("click", () => {
-            const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
-            const randomY = Math.floor(Math.random() * (window.innerHeight - 100));
-            yesButton.style.position = "absolute";
-            yesButton.style.left = randomX + "px";
-            yesButton.style.top = randomY + "px";
-
-            // Hide the message if it was visible
-            message.style.display = "none";
-        });
-
-        noButton.addEventListener("click", () => {
-            message.style.display = "block";
-
-            // Reset the position of the Yes button
-            yesButton.style.position = "static";
-            yesButton.style.left = initialPosition.left;
-            yesButton.style.top = initialPosition.top;
-        });
-    </script>
+<!-- partial:index.partial.html -->
+<a href="#"><span>non Adhérent</span></a>
+<!-- partial -->
+  
 </body>
 </html>
 
